@@ -1,0 +1,24 @@
+1. Extending my code to domains beyond Amazon.com
+
+I would create subclasses inside my DataScraper class where each subclass would parse the necessary data from its respective domain.  The parent class, DataScraper, would contain the methods set_url and make_soup while each child class would contain the methods to scrape the URL data from its respective domain.  For example, suppose we also wanted to scrape data from Chegg.com. Then I would implement a parent class called DataScraper and two child classes called AmazonScrape and CheggScrape.  DataScraper would contain methods that read the data, implement BeautifulSoup, and initialize the data that will be scraped (title, author, weight, price, and ISBN).  Each subclass would contain methods for parsing the title, author, weight, price, and ISBN for a book.
+
+2. Extending my code to products beyond simply books
+
+I would create subclasses for each product.  The parent class, DataScraper, would contain methods to read the URL and set a default weight so that the BookOrder class can be implemented (the only requirement for the BookOrder class is that each object has a weight).  Each subclass would parse specific data pertaining to its particular product then make a dictionary entry for the given product.  For example, a BookScraper class would parse the ISBN number whereas a ToyScraper class would parse the UPC code, while both classes would implement a method for obtaining the weight of its respective product.
+
+3. Extending my code to parse and ship 2,000,000 books
+
+I would use parallel programming.  This would require creating multiple data scrapers, and running them in threads, where each thread parses a distinct list of urls. Finally, we create a module to implement this threading using Python’s multiprocessing module.
+
+1. Extending my code to domains beyond Amazon.com
+
+I would create subclasses inside my DataScraper class where each subclass would parse the necessary data from its respective domain.  The parent class, DataScraper, would contain the methods set_url and make_soup while each child class would contain the methods to scrape the URL data from its respective domain.  For example, suppose we also wanted to scrape data from Chegg.com. Then I would implement a parent class called DataScraper and two child classes called AmazonScrape and CheggScrape.  DataScraper would contain methods that read the data, implement BeautifulSoup, and initialize the data that will be scraped (title, author, weight, price, and ISBN).  Each subclass would contain methods for parsing the title, author, weight, price, and ISBN for a book.
+
+2. Extending my code to products beyond simply books
+
+I would create subclasses for each product.  The parent class, DataScraper, would contain methods to read the URL and set a default weight so that the BookOrder class can be implemented (the only requirement for the BookOrder class is that each object has a weight).  Each subclass would parse specific data pertaining to its particular product then make a dictionary entry for the given product.  For example, a BookScraper class would parse the ISBN number whereas a ToyScraper class would parse the UPC code, while both classes would implement a method for obtaining the weight of its respective product.
+
+3. Extending my code to parse and ship 2,000,000 books
+
+I would use parallel programming.  This would require creating multiple data scrapers, and running them in threads, where each thread parses a distinct list of urls. Finally, we create a module to implement this threading using Python’s multiprocessing module.
+
